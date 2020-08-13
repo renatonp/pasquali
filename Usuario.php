@@ -18,7 +18,7 @@ class Usuario(){
         $id_usuario = $dados["id"];
 
         $this->conectarBanco();
-        mysql_query("UPDATE FROM usuarios SET nome = '".$dados["nome"]."',endereco = '".$dados["endereco"]."',telefone = '".$dados["telefone"]."'");
+        mysql_query("UPDATE FROM usuarios SET nome = '".$dados["nome"]."',endereco = '".$dados["endereco"]."',telefone = '".$dados["telefone"]."' WHERE id = '".id_usuario."'");
         mysql_close($conexao);
     }
 
