@@ -23,8 +23,10 @@ class Usuario(){
     }
 
     public function removerUsuario($dados){
+        $id_usuario = $dados["id"];
+
         $this->conectarBanco();
-        mysql_query("DELETE FROM usuarios WHERE id = '".$dados["id"]."'");
+        mysql_query("DELETE FROM usuarios WHERE id = '".$id_usuario."'");
         mysql_close($conexao);
     }
 
